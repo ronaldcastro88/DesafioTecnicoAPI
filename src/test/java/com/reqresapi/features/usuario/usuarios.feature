@@ -6,7 +6,7 @@ Feature: Administración de usuarios desde el API pública de ReqRes
     * def testUser = testData.nuevoUsuario
     * def updateTestUser = testData.actualizarUsuario
     * def userSchema = read('esquemasUsuarios.json')
-    * header x-api-key = 'reqres-free-v1'
+    * header x-api-key = apiKey
 
   @ObtenerUsuarios @Regresion
   Scenario: Obtener lista de usuarios por paginación

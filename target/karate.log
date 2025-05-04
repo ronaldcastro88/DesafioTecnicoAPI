@@ -1,23 +1,32 @@
-15:12:30.121 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @CrearUsuario
-15:12:31.622 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
-15:12:32.537 [Test worker] INFO  com.intuit.karate - [print] Se creo el usuario con el id: 290 
-15:12:32.538 [Test worker] INFO  com.intuit.karate - [print] {
-  "name": "Agustin Castro",
-  "job": "QA Automation",
-  "id": "290",
-  "createdAt": "2025-05-04T20:12:35.514Z"
-}
- 
-15:12:33.482 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @CrearUsuario
-15:12:34.190 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1746389554186
-15:12:34.222 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
-15:12:34.634 [Test worker] INFO  com.intuit.karate - [print] Se creo el usuario con el id: 703 
-15:12:34.635 [Test worker] INFO  com.intuit.karate - [print] {
-  "name": "Agustin Castro",
-  "job": "QA Automation",
-  "id": "703",
-  "createdAt": "2025-05-04T20:12:37.639Z"
-}
- 
-15:12:34.865 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 3 (0 remaining) classpath:com/reqresapi/features/usuario/usuarios.feature
-15:12:35.400 [Test worker] INFO  n.m.cucumber.ReportParser - File 'C:\Users\ronal\Documents\Automation\DesafioTecnicoAPI\build\karate-reports\com.reqresapi.features.usuario.usuarios.json' contains 1 feature(s)
+16:19:17.665 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:com/reqresapi/features/integracion/integracionUsuarios.feature
+16:19:18.916 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:19:19.595 [Test worker] INFO  com.intuit.karate - [print] Total de usuarios por página  12 
+16:19:20.035 [Test worker] INFO  com.intuit.karate - [print] El usuario fue creado con el ID  998 
+16:19:21.282 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:com/reqresapi/features/integracion/integracionUsuarios.feature
+16:19:21.300 [Test worker] WARN  com.intuit.karate.Suite - failed to backup existing dir: build\karate-reports
+16:19:21.319 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:19:21.651 [Test worker] INFO  com.intuit.karate - [print] Total de usuarios por página  12 
+16:19:22.258 [Test worker] INFO  com.intuit.karate - [print] El usuario fue creado con el ID  818 
+16:19:22.331 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:com/reqresapi/features/integracion/integracionUsuarios.feature
+16:19:22.734 [Test worker] INFO  n.m.cucumber.ReportParser - File 'C:\Users\ronal\Documents\Automation\DesafioTecnicoAPI\build\karate-reports\com.reqresapi.features.integracion.integracionUsuarios.json' contains 1 feature(s)
+16:22:00.641 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:com/reqresapi/features/autenticacion/autenticacion.feature
+16:22:01.894 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:02.998 [Test worker] INFO  com.intuit.karate - [print] Registration successful. Token: QpwL5tke4Pnpja7X4 
+16:22:03.029 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:03.595 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:04.018 [Test worker] INFO  com.intuit.karate - [print] Login successful. Token: QpwL5tke4Pnpja7X4 
+16:22:04.028 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:04.435 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:04.851 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:09.626 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:com/reqresapi/features/autenticacion/autenticacion.feature
+16:22:09.650 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1746393729644
+16:22:09.663 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:10.076 [Test worker] INFO  com.intuit.karate - [print] Registration successful. Token: QpwL5tke4Pnpja7X4 
+16:22:10.080 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:10.505 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:10.907 [Test worker] INFO  com.intuit.karate - [print] Login successful. Token: QpwL5tke4Pnpja7X4 
+16:22:10.911 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:11.319 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:11.722 [Test worker] INFO  com.intuit.karate - karate.env system property was: null 
+16:22:15.456 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:com/reqresapi/features/autenticacion/autenticacion.feature
+16:22:15.855 [Test worker] INFO  n.m.cucumber.ReportParser - File 'C:\Users\ronal\Documents\Automation\DesafioTecnicoAPI\build\karate-reports\com.reqresapi.features.autenticacion.autenticacion.json' contains 1 feature(s)

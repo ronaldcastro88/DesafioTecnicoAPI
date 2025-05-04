@@ -7,7 +7,7 @@ function fn() {
   var config = {
     env: env,
     ulrBase: 'https://reqres.in/api',
-    apiKey: karate.properties['x-api-key'],
+    apiKey: 'reqres-free-v1',
     timeoutMs: 5000
   };
   // Base datos de prueba
@@ -35,7 +35,7 @@ function fn() {
   };
 
   // Función helper para generar datos aleatorios (para evitar colisiones en pruebas)
-  config.getRandomEmail = function() {
+  config.obtenerCorreoRandom = function() {
     var timestamp = new Date().getTime();
     return 'user.' + timestamp + '@reqres.test';
   };

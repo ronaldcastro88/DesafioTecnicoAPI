@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Tag: @Regresion</title>
+<title>Cucumber Reports  - Tag: @IntegracionUsuarios</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>reqres-api-testing</td>
-      <td>04 may 2025, 15:12</td>
+      <td>04 may 2025, 16:19</td>
     </tr>
   </tbody>
 </table>
@@ -126,19 +126,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@Regresion</td>
-          <td      class="passed"    >13</td>
+          <td class="tagname">@IntegracionUsuarios</td>
+          <td      class="passed"    >16</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">13</td>
+          <td class="total">16</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="403299100">0.403</td>
+          <td class="duration" data-value="929352200">0.929</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,25 +171,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1431160602.html">com/reqresapi/features/usuario/usuarios.feature</a>
+      <a href="report-feature_2632063546.html">com/reqresapi/features/integracion/integracionUsuarios.feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2660415750.html">@CrearUsuario</a>
-       <a href="report-tag_487455899.html">@Regresion</a>
+       <a href="report-tag_3876887881.html">@IntegracionUsuarios</a>
 </div>
 
 
-  <span class="lead-duration duration">0.403</span>
+  <span class="lead-duration duration">0.929</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Crear un nuevo usuario</span>
+  <span class="name">Flujo completo de toda la gesti&oacute;n de usuarios</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -223,7 +222,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">def nombre = &quot;Agustin Castro&quot;</span>
+  <span class="name">configure headers = { x-api-key: 'reqres-free-v1' }</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -246,33 +245,7 @@ $(document).ready(function() {
 
       </div>
       <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def cargo = &quot;QA Automation&quot;</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
+          <div class="comment indention"># Paso 1: Obtiene la lista inicial de usuarios para verificar el estado actual</div>
 
 
 <div class="brief step-name-Given passed">
@@ -304,9 +277,144 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request</span>
+  <span class="name">param page = 1</span>
 
   <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.319</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.page == 1</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def initialTotalUsers = $.total</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print 'Total de usuarios por p&aacute;gina ', initialTotalUsers</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -324,13 +432,66 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>{
-  name: &quot;#(nombre)&quot;,
-  job: &quot;#(cargo)&quot;
-}</pre>
+        <pre>16:19:21.651 [print] Total de usuarios por p&aacute;gina  12 
+</pre>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+          <div class="comment indention"># Step 2: Crea el nuevo usuario</div>
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/users'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request usuario</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +507,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method POST</span>
 
-  <span class="lead-duration duration">0.397</span>
+  <span class="lead-duration duration">0.602</span>
 
 </div>
 
@@ -398,36 +559,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">match $.name == nombre</span>
+  <span class="name">match $.name == usuario.name</span>
 
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match $.job == cargo</span>
-
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -452,34 +586,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">match $.id == '#string'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match $.createdAt == '#string'</span>
+  <span class="name">match $.job == usuario.job</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -506,7 +613,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">def userId = response.id</span>
+  <span class="name">def userId = $.id</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -533,7 +640,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">print 'Se creo el usuario con el id:', userId</span>
+  <span class="name">print 'El usuario fue creado con el ID ', userId</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -553,51 +660,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>15:12:34.634 [print] Se creo el usuario con el id: 703 
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print response</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>15:12:34.635 [print] {
-  &quot;name&quot;: &quot;Agustin Castro&quot;,
-  &quot;job&quot;: &quot;QA Automation&quot;,
-  &quot;id&quot;: &quot;703&quot;,
-  &quot;createdAt&quot;: &quot;2025-05-04T20:12:37.639Z&quot;
-}
- 
+        <pre>16:19:22.258 [print] El usuario fue creado con el ID  818 
 </pre>
       </div>
     </div>

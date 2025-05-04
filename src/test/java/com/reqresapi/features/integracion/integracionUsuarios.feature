@@ -16,7 +16,7 @@ Feature: Complete user lifecycle integration flows
     Then status 200
     And match $.page == 1
     * def initialTotalUsers = $.total
-    * print 'Initial total users:', initialTotalUsers
+    * print 'Total de usuarios por página ', initialTotalUsers
 
     # Step 2: Crea el nuevo usuario
     Given path '/users'
@@ -139,7 +139,7 @@ Feature: Complete user lifecycle integration flows
     And match $.page == 1
     And match $.per_page == 6
     And match $.data == '#[response.per_page]'
-    * print 'Users on page 1:', response.data.length
+    * print 'Usuarios en página 1', response.data.length
     * print response
 
     # Step 5: Obtiene los usuarios por paginación en este caso la página 2
@@ -149,5 +149,5 @@ Feature: Complete user lifecycle integration flows
     Then status 200
     And match $.page == 2
     And match $.data == '#array'
-    * print 'Users on page 2:', response.data.length
+    * print 'Usuarios en página 2:', response.data.length
     * print response
