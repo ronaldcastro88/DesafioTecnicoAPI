@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.reqresapi'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("com.intuit.karate:karate-junit5:1.4.1")
+    implementation 'net.masterthought:cucumber-reporting:5.8.4'
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+sourceSets {
+    test {
+        java {
+            srcDir file('src/test/java')
+            exclude '**/*UiRunner*.java'
+        }
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}

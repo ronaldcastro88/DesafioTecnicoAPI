@@ -1,0 +1,37 @@
+{
+  "listUsers": {
+    "page": "#number",
+    "per_page": "#number",
+    "total": "#number",
+    "total_pages": "#number",
+    "data": "#array",
+    "support": {
+      "url": "#string",
+      "text": "#string"
+    }
+  },
+  "singleUser": {
+    "data": {
+      "id": "#number",
+      "email": "#string",
+      "first_name": "#string",
+      "last_name": "#string",
+      "avatar": "#string"
+    },
+    "support": {
+      "url": "#string",
+      "text": "#string"
+    }
+  },
+  "createUser": {
+    "name": "#string",
+    "job": "#string",
+    "id": "#string",
+    "createdAt": "#string"
+  },
+  "updateUser": {
+    "name": "#string",
+    "job": "#string",
+    "updatedAt": "#string"
+  }
+}
