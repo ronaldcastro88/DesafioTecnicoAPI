@@ -117,6 +117,7 @@ Feature: Complete user lifecycle integration flows
     Then status 201
     * def userId1 = $.id
 
+
     # Step 2: Crea un segundo usuario
     Given path '/users'
     And request { name: 'Maria Isabel', job: 'QA 2' }
@@ -131,7 +132,10 @@ Feature: Complete user lifecycle integration flows
     Then status 201
     * def userId3 = $.id
 
-    # Step 4: Obtiene los usuarios por paginación en este caso la página 1
+    # Step 5: Reutiliza todo el feature de usuarios (Obtiene usuarios por página, crea un nuevo usuario y obtiene un usuario por ID)
+    * call read('classpath:com/reqresapi/features/autenticacion/autenticacion.feature')
+
+    # Step 6: Obtiene los usuarios por paginación en este caso la página 1
     Given path '/users'
     And param page = 1
     When method GET
@@ -142,7 +146,7 @@ Feature: Complete user lifecycle integration flows
     * print 'Usuarios en página 1', response.data.length
     * print response
 
-    # Step 5: Obtiene los usuarios por paginación en este caso la página 2
+    # Step 7: Obtiene los usuarios por paginación en este caso la página 2
     Given path '/users'
     And param page = 2
     When method GET
